@@ -1,0 +1,23 @@
+{
+  "name": "js-tdd-curso",
+  "version": "1.0.0",
+  "description": "Biblioteca do curso JS com TDD na prática",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wps13/js-tdd-curso.git"
+  },
+  "keywords": [
+    "library",
+    "js"
+  ],
+  "author": "Willane Paiva",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/wps13/js-tdd-curso/issues"
+  },
+  "homepage": "https://github.com/wps13/js-tdd-curso#readme"
+}
