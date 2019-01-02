@@ -4,7 +4,7 @@
   "description": "Biblioteca do curso JS com TDD na prática",
   "main": "index.js",
   "scripts": {
-    "lint": "./node_modules/.bin/eslint",
+    "lint": "eslint . --ignore-path .gitignore",
     "prepush":"npm run lint",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
