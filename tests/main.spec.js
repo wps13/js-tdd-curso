@@ -1,49 +1,50 @@
-/* eslint-disable no-console */
 /* eslint-disable func-names */
-/* eslint-disable no-undef */
+import { expect } from "chai";
+import calc from "../src/main";
 
-const { expect } = require("chai");
-
-// hooks do mocha
-let arr;
-describe("Main", function() {
-  // roda uma vvez, antes do bloco
-  before(function() {});
-
-  // roda uma vez, depois do bloco
-  after(function() {});
-
-  // roda todas as vezes, antes de cada bloco
-  beforeEach(function() {
-    arr = [1, 2, 3];
+describe("Calc", () => {
+  describe("Smoke test", () => {
+    it("should exist the calc lib", () => {
+      expect(calc).to.exist;
+    });
+    it("should exist the method sum", () => {
+      expect(calc.sum).to.exist;
+      // expect(calc.sum).to.be.a.;
+    });
+    it("should exist the method sub", () => {
+      expect(calc.sum).to.exist;
+      // expect(calc.sum).to.be.a.;
+    });
+    it("should exist the method mult", () => {
+      expect(calc.sum).to.exist;
+      // expect(calc.sum).to.be.a.;
+    });
+    it("should exist the method div", () => {
+      expect(calc.sum).to.exist;
+      // expect(calc.sum).to.be.a.;
+    });
   });
-
-  // roda todas as vezes, depois de cada bloco
-  afterEach(function() {});
-
-  it("should be an array", function() {
-    expect(arr).to.be.a("array");
+  describe("Sum", () => {
+    it("Should return 4 when sum(2,2)", () => {
+      expect(calc.sum(2, 2)).to.be.equal(4);
+    });
   });
-
-  it("should have a size of 4 when push another value to the array", function() {
-    arr.push(4);
-    // console.log(arr.length);
-    expect(arr).to.have.lengthOf(4);
+  describe("Sub", () => {
+    it("Should return 4 when sub(6,2)", () => {
+      expect(calc.sub(6, 2)).to.be.equal(4);
+    });
+    it("Should return -4 when sub(6,10)", () => {
+      expect(calc.sub(6, 10)).to.be.equal(-4);
+    });
   });
-
-  it("should have a size of 2 when pop a value from the array", function() {
-    arr.pop();
-    // console.log(arr.length);
-    expect(arr).to.not.include(3);
+  describe("Mult", () => {
+    it("Should return 4 when mult(2,2)", () => {
+      expect(calc.mult(2, 2)).to.be.equal(4);
+    });
   });
-
-  it("Should return true if the element 3 is removed", function() {
-    expect(arr.pop() === 3).to.be.eql(true);
-  });
-
-  it("should remove the value 3 when use pop in the array", function() {
-    // console.log(arr.pop() === 3);
-    arr.pop();
-    expect(arr).to.have.lengthOf(2);
+  describe("Div", () => {
+    it("Should return 4 when div(8,2)", () => {
+      expect(calc.div(8, 2)).to.be.equal(4);
+    });
   });
 });
