@@ -1,28 +1,29 @@
+/* eslint-disable no-console */
 /* eslint-disable func-names */
 /* eslint-disable no-undef */
 
-// only => roda somente aquele teste
-// skip => pula aquele teste
+// hooks do mocha
 
-describe("Main", () => {
-  describe("Method A", () => {
-    context("Case 1", function() {
-      it.skip("Should do something", function() {
-        // espera que aconteça
-        // entrada de dados
-        // espera retornar
-        throw new Error("error 1");
-      });
-    });
-  });
-  describe("Method B", () => {
-    context.only("Case 2", function() {
-      it("Should do something else", function() {
-        // espera que aconteça
-        // entrada de dados
-        // espera retornar
-      });
-      it("Should be another thing", function() {});
-    });
-  });
+before(function() {
+  console.log("before");
+});
+
+after(function() {
+  console.log("after");
+});
+
+beforeEach(function() {
+  console.log("beforeEach");
+});
+
+afterEach(function() {
+  console.log("afterEach");
+});
+
+it("test1", function() {
+  console.log("test 1");
+});
+
+it("test  ", function() {
+  console.log("test 2");
 });
