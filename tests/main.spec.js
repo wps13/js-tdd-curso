@@ -3,27 +3,33 @@
 /* eslint-disable no-undef */
 
 // hooks do mocha
+let arr;
+describe("Main", function() {
+  // roda uma vvez, antes do bloco
+  before(function() {});
 
-before(function() {
-  console.log("before");
-});
+  // roda uma vez, depois do bloco
+  after(function() {});
 
-after(function() {
-  console.log("after");
-});
+  // roda todas as vezes, antes de cada bloco
+  beforeEach(function() {
+    arr = [1, 2, 3];
+  });
 
-beforeEach(function() {
-  console.log("beforeEach");
-});
+  // roda todas as vezes, depois de cada bloco
+  afterEach(function() {});
 
-afterEach(function() {
-  console.log("afterEach");
-});
+  it("should have a size of 4 when push another value to the array", function() {
+    arr.push(4);
+    console.log(arr.length);
+  });
 
-it("test1", function() {
-  console.log("test 1");
-});
+  it("should have a size of 2 when pop a value from the array", function() {
+    arr.pop();
+    console.log(arr.length);
+  });
 
-it("test  ", function() {
-  console.log("test 2");
+  it("should remove the value 3 when use pop in the array", function() {
+    console.log(arr.pop() === 3);
+  });
 });
