@@ -1,6 +1,8 @@
 /* eslint-disable func-names */
 import { expect } from "chai";
-import calc, { sum, sub, mult, div } from "../src/main";
+import calc from "../src/main";
+
+const { sum, sub, mult, div } = calc;
 
 describe("Calc", () => {
   describe("Smoke test", () => {
@@ -12,15 +14,15 @@ describe("Calc", () => {
       // expect(sum).to.be.a.;
     });
     it("should exist the method sub", () => {
-      expect(sum).to.exist;
+      expect(sub).to.exist;
       // expect(sum).to.be.a.;
     });
     it("should exist the method mult", () => {
-      expect(sum).to.exist;
+      expect(mult).to.exist;
       // expect(sum).to.be.a.;
     });
     it("should exist the method div", () => {
-      expect(sum).to.exist;
+      expect(div).to.exist;
       // expect(sum).to.be.a.;
     });
   });
