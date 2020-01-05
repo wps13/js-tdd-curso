@@ -1,5 +1,7 @@
 # Project Title
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/wps13/js-tdd-curso.svg)](https://greenkeeper.io/)
+
 One Paragraph of project description goes here
 
 ## Getting Started
